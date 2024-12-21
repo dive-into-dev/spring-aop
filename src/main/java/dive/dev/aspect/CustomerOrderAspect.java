@@ -1,6 +1,5 @@
 package dive.dev.aspect;
 
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -10,12 +9,12 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class CustomerOrderAspect {
 	
 	@Before("execution(* dive.dev.controller.CustomerOrderController.*(..))")
-	public void beforCustomerOrder(JoinPoint jp) {
+	public void beforCustomerOrder() {
 		System.out.println("@Before");
 	}
 	
